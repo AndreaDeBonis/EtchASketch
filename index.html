@@ -9,12 +9,18 @@
 </head>
 <body>
     <div class="tools">
-    <button onclick="createGrid(prompt('Insert grid dimensions'))"> Change Grid dimensions</button>
-    <button style="background-color: black; width: 30px; height: 30px;" onclick="changeColor('black')"> </button>
-    <button style="background-color: green; width: 30px; height: 30px;" onclick="changeColor('green')"> </button>
-    <button style="background-color: yellow; width: 30px; height: 30px;" onclick="changeColor('yellow')"> </button>
-    <button style="background-color: blue; width: 30px; height: 30px;" onclick="changeColor('blue')"> </button>
-    <button onclick="changeColor('inherit')"> Rubber </button>
+    <p>Select a grid size</p>
+    <p id="gridSizeValue">24 x 24</p>
+    <input type="range" min="1" max="100" value="24" class="slider" id="gridSizeSlider">
+    <p>Pick a color</p>
+    <input type="color" id="colorPicker">
+    <!-- <button class="color" style="background-color: black; " onclick="changeColor('black')"> </button>
+    <button class='color' style="background-color: green; " onclick="changeColor('green')"> </button>
+    <button class='color' style="background-color: yellow; " onclick="changeColor('yellow')"> </button>
+    <button class='color' style="background-color: blue; " onclick="changeColor('blue')"> </button> -->
+    <button class='color' id="rainbow"; " onclick="changeColor('rainbow')"> </button>
+    <button onclick="changeColor('inherit')"> Eraser </button>
+    <button onclick="createGrid()"> Delete drawing </button>
     </div>
     <div class="container">
     </div>

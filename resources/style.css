@@ -2,9 +2,22 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: rgb(190, 190, 190);
+    background-color: rgb(231, 231, 231);
     display: flex;
 }
+
+button {
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+button:hover {
+    scale: 1.1;
+    transition: 0.1s;
+    color: rgb(231, 231, 231);
+    background-color: black;
+}
+
 
 .tools {
     display: flex;
@@ -15,11 +28,20 @@ body {
     margin-left: 100px;
 }
 
+.color {
+    width: 162px;
+    height: 50px;
+}
+
+
 .container {
-    padding: 20px;
-    width: 100vh;
-    margin: auto;
+    padding: 0;
+    aspect-ratio: 1/1;
+    margin: 40px auto;
     box-sizing: border-box;
+    border: 0;
+    box-shadow: 0 0px 8px ;
+    background-color: white;
 }
 
 .row {
@@ -38,12 +60,46 @@ body {
     margin: 0;
     flex: 1 1 0;
     aspect-ratio: 1/1;
-    border: 1px solid rgb(70, 70, 70);
-    min-width: 0;
+    border: 0;
     height: auto;
     box-sizing: border-box;
 }
 
 .backgroundColor {
     background-color: rgb(0, 0, 0);
+}
+
+#gridSizeSlider {
+
+}
+
+#rainbow {
+    background: linear-gradient(
+        30deg,
+        rgba(255, 0, 0, 1) 0%,
+        rgba(255, 154, 0, 1) 10%,
+        rgba(208, 222, 33, 1) 20%,
+        rgba(79, 220, 74, 1) 30%,
+        rgba(63, 218, 216, 1) 40%,
+        rgba(47, 201, 226, 1) 50%,
+        rgba(28, 127, 238, 1) 60%,
+        rgba(95, 21, 242, 1) 70%,
+        rgba(186, 12, 248, 1) 80%,
+        rgba(251, 7, 217, 1) 90%,
+        rgba(255, 0, 0, 1) 100%)
+}
+
+#colorPicker {
+    padding: 0px;
+    border: 0px;
+    width: 162px;
+    height: 50px;
+    flex: 0 0 1;
+    border-radius: 5px;
+    
+}
+
+#colorPicker:hover {
+    scale: 1.1;
+    transition: 0.1s;
 }
