@@ -8,7 +8,14 @@
     <script src="./resources/script.js" defer></script>
 </head>
 <body>
+    <div class="tools">
     <button onclick="createGrid(prompt('Insert grid dimensions'))"> Change Grid dimensions</button>
+    <button style="background-color: black; width: 30px; height: 30px;" onclick="changeColor('black')"> </button>
+    <button style="background-color: green; width: 30px; height: 30px;" onclick="changeColor('green')"> </button>
+    <button style="background-color: yellow; width: 30px; height: 30px;" onclick="changeColor('yellow')"> </button>
+    <button style="background-color: blue; width: 30px; height: 30px;" onclick="changeColor('blue')"> </button>
+    <button onclick="changeColor('inherit')"> Rubber </button>
+    </div>
     <div class="container">
     </div>
 </body>

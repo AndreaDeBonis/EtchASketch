@@ -1,15 +1,26 @@
 const body = document.querySelector('body')
 let container = document.querySelector('.container')
+let color = 'black'
+let mouseDown = 0;
+document.body.onmousedown = function() { 
+  mouseDown = 1;
+}
+document.body.onmouseup = function() {
+  mouseDown = 0;
+}
+
+function changeColor(newColor) {
+    color = newColor
+}
 
 function animateGrid () {
     const squares = document.querySelectorAll('.gridElement')
 squares.forEach(div => {
-    div.addEventListener('mousedown', e => {
-    e.target.classList.add('backgroundColor')
+    div.addEventListener('mouseover', e => {
+    if(mouseDown==1) {
+    e.target.style.backgroundColor = color}
 })
-div.addEventListener('mouseout', e => {
-    e.target.addEventListener('transitionend', e => e.target.classList.remove('backgroundColor'))
-})})
+})
 }
 
 
